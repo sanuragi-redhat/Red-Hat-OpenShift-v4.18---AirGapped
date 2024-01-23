@@ -119,6 +119,6 @@
 - Encrypting the ETCD data
 - Backing Up ETCD data
 
-## 11. Removing the kubeadmin user
+## 8. Removing the kubeadmin user
 
-## 12. Future Cluster OpenShift version upgrades
+## 9. Future Cluster OpenShift version upgrades
