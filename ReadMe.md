@@ -22,16 +22,29 @@
 
 ## 2. Configuring Registry Node.
 
-2.1. Creating a mirror registry with mirror registry for Red Hat OpenShift 
-
-Prerequisites. 
+2.1. Prerequisites node validation. 
 
 - Operating System Details
 - Block Device (Hard Disk) Details
 - Network Configuration
 - Route and Default Gateway Details
+- Enabling Repositories
 
-2.2 Quay Registry Configuration. 
+2.2 Configuration DNS Setup.
+
+- Install DNS Package. 
+- Configure DNS 
+- Create Zones 
+- nslookup domain
+
+2.3 Configuration NTP setup. 
+
+- Install NTP Package. 
+- Configure NTP 
+- Checking synchronize time.
+
+
+2.4 Quay Registry Configuration. 
  
 - Install podman and container-selinux packages for standalone registry
 - Check podman and buildah version needed for Quay Mirror Registry as it needs podman version greater than 3.0
@@ -52,19 +65,10 @@ Prerequisites.
 - Verify that, the version information that you mirrored to local registry is matching with quay.io registry
 
 
-## 3. Configure Bastion Node. 
+## 3. Installing a OpenShift Cluster in a Disconnected Network on Baremetal Machines
 
 
-3.1. Prerequisites for bastion node validation.
-
-- Operating System Details
-- Block Device (Hard Disk) Details
-- Network Configuration
-- Route and Default Gateway Details
-- Enabling Repositories
-
-
-3.2. Installing a OpenShift Cluster in a Disconnected Network on Baremetal Machines
+3.1. Installing a OpenShift Cluster Setup.
 
 - Generating an SSH private key and adding it to the agent
 - Manually creating the installation configuration file
@@ -81,7 +85,7 @@ Prerequisites.
 - Configure master nodes system clock sync with NTP server
 
 
-3.3. Deploying and Configuring Dell Unity XT CSI Driver for presistent block storage.
+3.2. Deploying and Configuring Dell Unity XT CSI Driver for presistent block storage.
 
 - Install dell Operators
 - Create a new namespace named unity.
