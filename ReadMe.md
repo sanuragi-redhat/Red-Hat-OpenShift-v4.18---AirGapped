@@ -13,11 +13,11 @@
 
 # 1. Configuring HA Node. 
 
-1. 
-1. 
-1. 
-1. 
-1. 
+1. Installation Haproxy Required Packages.
+1. Configure & Setup HAproxy.
+1. Start and Enable Haproxy.
+1. Disable firewall & Selinux. 
+1. Check HA status. 
 
 
 # 2. Configuring Registry Node.
