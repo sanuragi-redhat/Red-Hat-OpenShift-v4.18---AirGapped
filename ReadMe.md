@@ -2,101 +2,117 @@
 
 ## Technical Implementation
 
-0. Environment Setup
+# 0. Environment Setup
 
-    1. Node Information
-    1. Storage Information
-    
+- Network Infromation
+- Network Service
+- Load Balancer Config Details
+- Internet Access
+- Storage Information
+- Red Hat OpenShift Container Platform 4 - Logical HA Architecture
 
-1. Creating a mirror registry with mirror registry for Red Hat OpenShift 
+# 1. Configuring HA Node. 
 
-    1. Operating System Details
-    1. Block Device (Hard Disk) Details
-    1. Network Configuration
-    1. Route and Default Gateway Details
-    1. Enabling Repositories
-    1. Install podman and container-selinux packages for standalone registry
-    1. Check podman and buildah version needed for Quay Mirror Registry as it needs podman version greater than 3.0
-    1. Install the Quay Mirror Registry after the successful install see the below messages
-    1. Certificate pem directory placement.
-    1. Online pull secret download and configure serve to quay registry.
-    1. Setting up variables requirements for ocp images
-    1. Downloading and Pushing OCP-Base-Images
+1. 
+1. 
+1. 
+1. 
+1. 
 
 
+# 2. Configuring Registry Node.
 
-2. Mirror OCP 4.12 Images to Quay Mirror Registry
+2.1. Creating a mirror registry with mirror registry for Red Hat OpenShift 
 
-    1. Download and Install oc-mirror cli command line tool to use the plugin to download images.
-    1. Mirror the version images to the internal container registry
-    1. Create the ImageSetConfiguration with the cluster version and redhat-operator index image
-    1. Listing Operators after pushed in Quay registry.
-    1. Verify the registry storage size and repositories availability
-    1. Verify that, the version information that you mirrored to local registry is matching with quay.io registry
-
-
-
-3. Check Bastion Node for all the pre-Installation requirements
-
-    1. Operating System Details
-    1. Block Device (Hard Disk) Details
-    1. Network Configuration
-    1. Route and Default Gateway Details
-    1. Enabling Repositories
+- Operating System Details
+- Block Device (Hard Disk) Details
+- Network Configuration
+- Route and Default Gateway Details
+- Enabling Repositories
+- Install podman and container-selinux packages for standalone registry
+- Check podman and buildah version needed for Quay Mirror Registry as it needs podman version greater than 3.0
+- Install the Quay Mirror Registry after the successful install see the below messages
+- Certificate pem directory placement.
+- Online pull secret download and configure serve to quay registry.
+- Setting up variables requirements for ocp images
+- Downloading and Pushing OCP-Base-Images
 
 
 
-4. Installing a OpenShift Cluster in a Disconnected Network on Baremetal Machines
+# 3. Mirror OCP 4.12 Images to Quay Mirror Registry
 
-    1. Generating an SSH private key and adding it to the agent
-    1. Manually creating the installation configuration file
-    1. Creating the Openshift/Kubernetes manifest
-    1. Install and Configure Apache HTTPD Server
-    1. Openshift 4.11 Bootstrapping
-    1. Openshift Skeleton Deployment
-
-
-5. Create Machine Config Pool for infra nodes
-
-6. Move Ingress Controller components to infra nodes
-
-    1. Deploying Openshift Internal Registry with Persistent Storage
-    1. Configure System Clock Sync with NTP Server
-    1. Configure master nodes system clock sync with NTP server
+- Download and Install oc-mirror cli command line tool to use the plugin to download images.
+- Mirror the version images to the internal container registry
+- Create the ImageSetConfiguration with the cluster version and redhat-operator index image
+- Listing Operators after pushed in Quay registry.
+- Verify the registry storage size and repositories availability
+- Verify that, the version information that you mirrored to local registry is matching with quay.io registry
 
 
 
-8. Deploying and Configuring Dell Unity XT CSI Driver for presistent block storage.
-
-    1. Install dell Operators
-    1. Create a new namespace named unity.
-    1. Switch to unity project
-    1. Creating a Secret.
-    1. Creating a Configmap.
-    1. Creating a StorageClass.
-
-9. Moving monitoring components from Worker to Infra labeled nodes
-
-10. Deploying and Configuring Openshift Logging with Persistent Storage
-
-    1. Install Cluster Logging Operators
-    1. Install the Cluster Logging Operator
-    1. Create Cluster Logging Instance
-    1. Viewing cluster logs from the Kibana dashboard
+# 4. Configure Bastion Node. 
 
 
-11. Configuring an HTPasswd identity provider
+Prerequisites for bastion node validation.
 
-12. Configure Namespace/Project based isolation with Network Policy Multitenant Configuration
+- Operating System Details
+- Block Device (Hard Disk) Details
+- Network Configuration
+- Route and Default Gateway Details
+- Enabling Repositories
 
-    1. Creating default network policies for a new project
-    1. Adding network policy objects to the new project template
 
-13. Backup ETCD 
+# 5. Installing a OpenShift Cluster in a Disconnected Network on Baremetal Machines
 
-    1. Encrypting the ETCD data
-    1. Backing Up ETCD data
+- Generating an SSH private key and adding it to the agent
+- Manually creating the installation configuration file
+- Creating the Openshift/Kubernetes manifest
+- Install and Configure Apache HTTPD Server
+- Openshift 4.12 Bootstrapping
+- Openshift Skeleton Deployment
 
-14. Removing the kubeadmin user
+- Create Machine Config Pool for infra nodes
+- Move Ingress Controller components to infra nodes
+- Moving monitoring components from Worker to Infra labeled nodes
+- Deploying Openshift Internal Registry with Persistent Storage
+- Configure System Clock Sync with NTP Server
+- Configure master nodes system clock sync with NTP server
 
-15. Future Cluster OpenShift version upgrades
+
+# 6. Deploying and Configuring Dell Unity XT CSI Driver for presistent block storage.
+
+- Install dell Operators
+- Create a new namespace named unity.
+- Switch to unity project
+- Creating a Secret.
+- Creating a Configmap.
+- Creating a StorageClass.
+
+
+
+# 7. Deploying and Configuring Openshift Logging with Persistent Storage
+
+- Install Cluster Logging Operators
+- Install the Cluster Logging Operator
+- Create Cluster Logging Instance
+- Viewing cluster logs from the Kibana dashboard
+
+
+# 8. User Authentication 
+
+- Configuring an HTPasswd identity provider
+
+
+# 9. Configure Namespace/Project based isolation with Network Policy Multitenant Configuration
+
+- Creating default network policies for a new project
+- Adding network policy objects to the new project template
+
+# 10. Backup ETCD 
+
+- Encrypting the ETCD data
+- Backing Up ETCD data
+
+# 11. Removing the kubeadmin user
+
+# 12. Future Cluster OpenShift version upgrades
