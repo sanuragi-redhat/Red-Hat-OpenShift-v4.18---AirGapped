@@ -2,7 +2,7 @@
 
 ## Technical Implementation
 
-# 0. Environment Setup
+## 0. Environment Setup
 
 - Network Infromation
 - Network Service
@@ -11,7 +11,7 @@
 - Storage Information
 - Red Hat OpenShift Container Platform 4 - Logical HA Architecture
 
-# 1. Configuring HA Node. 
+## 1. Configuring HA Node. 
 
 1. Installation Haproxy Required Packages.
 1. Configure & Setup HAproxy.
@@ -20,26 +20,29 @@
 1. Check HA status. 
 
 
-# 2. Configuring Registry Node.
+## 2. Configuring Registry Node.
 
 2.1. Creating a mirror registry with mirror registry for Red Hat OpenShift 
+
+Prerequisites. 
 
 - Operating System Details
 - Block Device (Hard Disk) Details
 - Network Configuration
 - Route and Default Gateway Details
-- Enabling Repositories
+
+2.2 Quay Registry Configuration. 
+ 
 - Install podman and container-selinux packages for standalone registry
 - Check podman and buildah version needed for Quay Mirror Registry as it needs podman version greater than 3.0
-- Install the Quay Mirror Registry after the successful install see the below messages
+- Install the Quay Mirror Registry 
 - Certificate pem directory placement.
 - Online pull secret download and configure serve to quay registry.
 - Setting up variables requirements for ocp images
 - Downloading and Pushing OCP-Base-Images
 
 
-
-# 3. Mirror OCP 4.12 Images to Quay Mirror Registry
+2.3. Mirror OCP 4.12 Images to Quay Mirror Registry
 
 - Download and Install oc-mirror cli command line tool to use the plugin to download images.
 - Mirror the version images to the internal container registry
@@ -49,11 +52,10 @@
 - Verify that, the version information that you mirrored to local registry is matching with quay.io registry
 
 
+## 3. Configure Bastion Node. 
 
-# 4. Configure Bastion Node. 
 
-
-Prerequisites for bastion node validation.
+3.1. Prerequisites for bastion node validation.
 
 - Operating System Details
 - Block Device (Hard Disk) Details
@@ -62,7 +64,7 @@ Prerequisites for bastion node validation.
 - Enabling Repositories
 
 
-# 5. Installing a OpenShift Cluster in a Disconnected Network on Baremetal Machines
+3.2. Installing a OpenShift Cluster in a Disconnected Network on Baremetal Machines
 
 - Generating an SSH private key and adding it to the agent
 - Manually creating the installation configuration file
@@ -79,7 +81,7 @@ Prerequisites for bastion node validation.
 - Configure master nodes system clock sync with NTP server
 
 
-# 6. Deploying and Configuring Dell Unity XT CSI Driver for presistent block storage.
+3.3. Deploying and Configuring Dell Unity XT CSI Driver for presistent block storage.
 
 - Install dell Operators
 - Create a new namespace named unity.
@@ -90,7 +92,7 @@ Prerequisites for bastion node validation.
 
 
 
-# 7. Deploying and Configuring Openshift Logging with Persistent Storage
+## 4. Deploying and Configuring Openshift Logging with Persistent Storage
 
 - Install Cluster Logging Operators
 - Install the Cluster Logging Operator
@@ -98,21 +100,21 @@ Prerequisites for bastion node validation.
 - Viewing cluster logs from the Kibana dashboard
 
 
-# 8. User Authentication 
+## 5. User Authentication 
 
 - Configuring an HTPasswd identity provider
 
 
-# 9. Configure Namespace/Project based isolation with Network Policy Multitenant Configuration
+## 6. Configure Namespace/Project based isolation with Network Policy Multitenant Configuration
 
 - Creating default network policies for a new project
 - Adding network policy objects to the new project template
 
-# 10. Backup ETCD 
+## 7. Backup ETCD 
 
 - Encrypting the ETCD data
 - Backing Up ETCD data
 
-# 11. Removing the kubeadmin user
+## 11. Removing the kubeadmin user
 
-# 12. Future Cluster OpenShift version upgrades
+## 12. Future Cluster OpenShift version upgrades
