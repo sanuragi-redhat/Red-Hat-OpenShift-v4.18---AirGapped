@@ -48,8 +48,11 @@
  
 - Install podman and container-selinux packages for standalone registry
 - Check podman and buildah version needed for Quay Mirror Registry as it needs podman version greater than 3.0
+- Extract mirror registry. 
 - Install the Quay Mirror Registry 
-- Certificate pem directory placement.
+- Certificate pem directory placement
+- Quay login testing 
+- Extract pull-secret from quay mirror registry
 - Online pull secret download and configure serve to quay registry.
 - Setting up variables requirements for ocp images
 - Downloading and Pushing OCP-Base-Images
