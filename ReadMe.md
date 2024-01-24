@@ -64,9 +64,6 @@
 - Mirror the version images to the internal container registry
 - Create the ImageSetConfiguration with the cluster version and redhat-operator index image
 - Listing Operators after pushed in Quay registry.
-- Verify the registry storage size and repositories availability
-- Verify that, the version information that you mirrored to local registry is matching with quay.io registry
-
 
 ## 3. Installing a OpenShift Cluster in a Disconnected Network on Baremetal Machines
 
