@@ -1,4 +1,4 @@
-# OpenShift-v4.12-Baremetal
+# OpenShift-v4.12-Baremetal AirGapped Environment.
 
 ## Technical Implementation
 
